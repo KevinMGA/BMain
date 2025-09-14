@@ -1,7 +1,23 @@
-import * as THREE from 'three';
-import { OrbitControls } from '/boxing/lib/three/examples/jsm/controls/OrbitControls.js';
+async function loadThree(){
+  try{
+    return await import('../../lib/three/build/three.module.js');
+  }catch{
+    return await import('../../vendor/three/build/three.module.js');
+  }
+}
 
-export function makeThree(canvasParent){
+async function loadOrbit(){
+  try{
+    return (await import('../../lib/three/examples/jsm/controls/OrbitControls.js')).OrbitControls;
+  }catch{
+    return (await import('../../vendor/three/examples/jsm/controls/OrbitControls.js')).OrbitControls;
+  }
+}
+
+export async function makeThree(canvasParent){
+  const THREE = await loadThree();
+  const OrbitControls = await loadOrbit();
+
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x0b1017);
   const camera = new THREE.PerspectiveCamera(50, 16/9, 0.1, 100);

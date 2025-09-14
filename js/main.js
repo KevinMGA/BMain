@@ -2,9 +2,9 @@
 const app = document.getElementById('app');
 
 const routes = {
-  '#/menu': () => import('/boxing/js/views/menu.js'),
-  '#/editor': () => import('/boxing/js/views/editor.js'),
-  '#/match': () => import('/boxing/js/views/match.js'),
+  '#/menu': () => import('./views/menu.js'),
+  '#/editor': () => import('./views/editor.js'),
+  '#/match': () => import('./views/match.js'),
 };
 
 function showError(msg){
@@ -18,7 +18,7 @@ async function render(){
     const mod = await loader();
     const mount = mod.mount || mod.default;
     app.innerHTML = '';
-    mount(app);
+    await mount(app);
   }catch(err){
     console.error(err);
     showError(err?.message || String(err));
