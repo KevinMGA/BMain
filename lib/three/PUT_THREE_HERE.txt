@@ -1,0 +1,13 @@
+Place Three.js ES module files here:
+
+Required (exact paths):
+  /boxing/lib/three/build/three.module.js
+  /boxing/lib/three/examples/jsm/loaders/FBXLoader.js
+  /boxing/lib/three/examples/jsm/controls/OrbitControls.js
+
+Tip: If you have node installed:
+  npm i three@0.161
+  copy node_modules/three/build/three.module.js -> lib/three/build/
+  copy node_modules/three/examples/jsm/* -> lib/three/examples/jsm/
+
+The shim files under /lib/three/examples/js/* forward legacy paths to jsm.

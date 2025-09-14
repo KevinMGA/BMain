@@ -1,0 +1,9 @@
+Copy Three.js ESM files here if you don't already have them:
+
+/vendor/three/build/three.module.js
+/vendor/three/examples/jsm/loaders/FBXLoader.js
+/vendor/three/examples/jsm/controls/OrbitControls.js
+
+You can grab them from a local three.js install (node_modules/three/build + examples/jsm).
+
+This project uses an <importmap> in index.html to resolve 'three'.

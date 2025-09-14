@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Sideview Boxing</title>
+    <link rel="stylesheet" href="/boxing/css/styles.css"/>
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "/boxing/lib/three/build/three.module.js"
+      }
+    }
+    </script>
+    <style>
+      body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#0b1017;color:#dbe0ea}
+      a{color:#8ab4ff;text-decoration:none;margin-right:12px}
+      .wrap{padding:18px}
+      .error{background:#0f1723;border:1px solid #22324c;border-radius:10px;padding:16px;margin:16px 0}
+      pre{white-space:pre-wrap}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav><a href="#/menu">Menu</a> · <a href="#/editor">Editor</a> · <a href="#/match">Match</a></nav>
+      <div id="app"></div>
+      <div style="margin-top:20px">Three.js • FBX (Mixamo) • Local templates • Singleplayer only (for now)</div>
+    </div>
+    <script type="module" src="/boxing/js/main.js"></script>
+  </body>
+</html>

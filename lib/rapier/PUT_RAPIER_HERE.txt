@@ -1,0 +1,1 @@
+Put rapier.es.js and rapier_wasm3d_bg.wasm here (same folder).

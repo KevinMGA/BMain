@@ -1,0 +1,1 @@
+export function normalizeCharacter(group,targetHeight=1.75){ const s=targetHeight/1.8; group.scale.setScalar(s);}
