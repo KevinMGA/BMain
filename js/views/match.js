@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { FBXLoader } from '/boxing/lib/three/examples/jsm/loaders/FBXLoader.js';
+import { FBXLoader } from '../../lib/three/examples/jsm/loaders/FBXLoader.js';
 import { makeThree } from '../core/three-setup.js';
 
 export function mount(root){
@@ -19,7 +19,7 @@ export function mount(root){
   app.scene.add(cube);
 
   // Try to load your local character if present.
-  const tryPath = '/boxing/assets/character.fbx';
+  const tryPath = '../../assets/character.fbx';
   const loader = new FBXLoader();
   loader.load(tryPath, (g)=>{
     g.traverse(o=>{ o.castShadow = true; });
@@ -27,6 +27,6 @@ export function mount(root){
     app.scene.add(g);
     console.log('[FBX] loaded', g);
   }, undefined, (e)=>{
-    console.warn('[FBX] Could not load /boxing/assets/character.fbx (this is ok for now).');
+    console.warn('[FBX] Could not load ' + tryPath + ' (this is ok for now).');
   });
 }

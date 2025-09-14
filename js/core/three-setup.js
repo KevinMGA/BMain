@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { OrbitControls } from '/boxing/lib/three/examples/jsm/controls/OrbitControls.js';
+import { OrbitControls } from '../../lib/three/examples/jsm/controls/OrbitControls.js';
 
 export function makeThree(canvasParent){
   const scene = new THREE.Scene();
